@@ -73,7 +73,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ITema.cs" />
-    <Compile Include="Models\RepositorioTema.cs" />
+    <Compile Include="Models\RepositorioTemas.cs" />
     <Compile Include="Models\Tema.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilerias\BaseHelper.cs" />

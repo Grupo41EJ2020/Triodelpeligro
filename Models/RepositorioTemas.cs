@@ -7,12 +7,11 @@ using MVCLaboratorio.Utilerias;
 using System.Data;
 using System.Data.SqlClient;
 
-
 namespace MVCLaboratorio.Models
 {
-    public class RepositorioTema : ITema
-    {
 
+    public class RepositorioTemas : ITema
+    {
         public List<Tema> obtenerTemas()
         {
             DataTable dtTemas = BaseHelper.ejecutarConsulta("sp_Tema_ConsultarTodo", CommandType.StoredProcedure);
@@ -47,6 +46,16 @@ namespace MVCLaboratorio.Models
                 return null;
             }
         }
+
+        public void insertarTema(Tema datosTema)
+        {
+            ist<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(new SqlParameter("@IdVideo", datosTema.IdTema));
+            parametros.Add(new SqlParameter("@Nombre", datosTema.Nombre));
+
+            BaseHelper.ejecutarConsulta("SP_TEMA_INSERTAR", CommandType.StoredProcedure, parametros);
+        }
+
         public void eliminarTema(int idTema)
         {
             List<SqlParameter> parametros = new List<SqlParameter>();
@@ -63,16 +72,6 @@ namespace MVCLaboratorio.Models
             parametros.Add(new SqlParameter("@Nombre", datosTema.Nombre));
 
             BaseHelper.ejecutarConsulta("sp_Tema_Actualizar", CommandType.StoredProcedure, parametros);
-        }
-
-        public void insertarTema(Tema datosTema)
-        {
-            //No funciona ARREGLAR
-            List<SqlParameter> parametros = new List<SqlParameter>();
-            parametros.Add(new SqlParameter("@IdVideo", datosTema.IdTema));
-            parametros.Add(new SqlParameter("@Nombre", datosTema.Nombre));
-
-            BaseHelper.ejecutarConsulta("SP_TEMA_INSERTAR", CommandType.StoredProcedure, parametros);
         }
     }
 }

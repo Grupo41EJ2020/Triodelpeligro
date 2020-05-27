@@ -8,8 +8,8 @@
 </head>
 <body>
     <div>
-   <h1>Elija opcion</h1>
-        <a href="/Temas/DatosTemas">content</a>
-    </div
+    <h1>Elija opcion</h1>
+        <a href="/Temas/DatosTemas">Ir a Temas</a>
+    </div>
 </body>
 </html>

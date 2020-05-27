@@ -3,17 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MVCLaboratorio.Models;
-using MVCLaboratorio.Utilerias;
 using System.Data;
 using System.Data.SqlClient;
+using MVCLaboratorio.Models;
+using MVCLaboratorio.Utilerias;
 
 namespace MVCLaboratorio.Controllers
 {
     public class TemasController : Controller
     {
-        RepositorioTema repoTema = new RepositorioTema();
 
+        RepositorioTemas repoTema = new RepositorioTemas();
+
+        public ActionResult Index()
+        {
+            return View();
+        }
         public ActionResult Index()
         {
             return View();
@@ -42,7 +47,7 @@ namespace MVCLaboratorio.Controllers
         }
         public ActionResult EliminarTema(int id)
         {
-            
+
             return View(repoTema.obtenerTema(id));
         }
 

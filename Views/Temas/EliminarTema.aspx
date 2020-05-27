@@ -4,11 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>DetallesTema</title>
+    <title>EliminarTema</title>
 </head>
 <body>
+    <h3>Are you sure you want to delete this?</h3>
     <fieldset>
-        <legend>Datos</legend>
+        <legend>Fields</legend>
         
         <div class="display-label">IdTema</div>
         <div class="display-field"><%: Model.IdTema %></div>
@@ -17,10 +18,12 @@
         <div class="display-field"><%: Model.Nombre %></div>
         
     </fieldset>
-    <p>
-        <%: Html.ActionLink("Editar", "Editar", new {  id=Model.IdTema }) %> |
-        <%: Html.ActionLink("Regresar a la lista", "DatosTemas") %>
-    </p>
+    <% using (Html.BeginForm()) { %>
+        <p>
+		    <input type="submit" value="Delete" /> |
+		    <%: Html.ActionLink("Back to List", "Index") %>
+        </p>
+    <% } %>
 
 </body>
 </html>

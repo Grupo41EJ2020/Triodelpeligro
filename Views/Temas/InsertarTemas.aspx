@@ -11,7 +11,16 @@
         <%: Html.ValidationSummary(true) %>
 
         <fieldset>
-            <legend>Fields</legend>
+            <legend>Datos</legend>
+            
+            <div class="editor-label">
+                <%: Html.LabelFor(model => model.IdTema) %>
+            </div>
+            <div class="editor-field">
+                <%: Html.TextBoxFor(model => model.IdTema) %>
+                <%: Html.ValidationMessageFor(model => model.IdTema) %>
+            </div>
+            
             <div class="editor-label">
                 <%: Html.LabelFor(model => model.Nombre) %>
             </div>
@@ -21,14 +30,14 @@
             </div>
             
             <p>
-                <input type="submit" value="Create" />
+                <input type="submit" value="Insertar" />
             </p>
         </fieldset>
 
     <% } %>
 
     <div>
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <%: Html.ActionLink("Regresar a la lista", "DatosTemas") %>
     </div>
 
 </body>
