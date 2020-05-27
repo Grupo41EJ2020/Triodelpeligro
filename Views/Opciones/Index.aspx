@@ -4,13 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>Pia Desarrollo de Software</title>
+    <title>Index</title>
 </head>
-    <h1>Producto integrador de Aprendizaje: Desarrollo sorftware</h1>
-    <br />
-    <br />
-    <h2>Bievenido</h2>
-
-    <a href="/Opciones/Index">Ir a opciones</a>
+<body>
+    <div>
+   <h1>Elija opcion</h1>
+        <a href="/Temas/DatosTemas">content</a>
+    </div
 </body>
 </html>
