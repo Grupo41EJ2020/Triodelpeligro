@@ -19,10 +19,6 @@ namespace MVCLaboratorio.Controllers
         {
             return View();
         }
-        public ActionResult Index()
-        {
-            return View();
-        }
         public ActionResult DatosTemas()
         {
             return View(repoTema.obtenerTemas());

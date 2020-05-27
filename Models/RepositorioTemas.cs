@@ -49,7 +49,7 @@ namespace MVCLaboratorio.Models
 
         public void insertarTema(Tema datosTema)
         {
-            ist<SqlParameter> parametros = new List<SqlParameter>();
+            List<SqlParameter> parametros = new List<SqlParameter>();
             parametros.Add(new SqlParameter("@IdVideo", datosTema.IdTema));
             parametros.Add(new SqlParameter("@Nombre", datosTema.Nombre));
 
