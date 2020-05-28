@@ -27,24 +27,36 @@ namespace MVCLaboratorio.Controllers
         {
             return View(repoTema.obtenerTema(id));
         }
-        public ActionResult InsertarTemas(int id)
+        public ActionResult InsertarTemas()
         {
-            //NO FUNCIOOONAAAAA arreglar
-            return View(repoTema.obtenerTema(id));
+            return View();
         }
         [HttpPost]
-        public ActionResult InsertarTemas(int id, Tema datos)
+        public ActionResult InsertarTemas(Tema datos)
         {
-
-            //NO FUNCIOOONAAAAA arreglar
-            datos.IdTema = id;
             repoTema.insertarTema(datos);
             return RedirectToAction("DatosTemas");
         }
-        public ActionResult EliminarTema(int id)
+        public ActionResult EliminarTemas(int id)
         {
-
             return View(repoTema.obtenerTema(id));
+        }
+        [HttpPost]
+        public ActionResult EliminarTemas(int id, FormCollection frm)
+        {
+            repoTema.eliminarTema(id);
+            return RedirectToAction("DatosTemas");
+        }
+        public ActionResult EditarTema(int id)
+        {
+            return View(repoTema.obtenerTema(id));
+        }
+        [HttpPost]
+        public ActionResult EditarTema(int id, Tema datos)
+        {
+            datos.IdTema = id;
+            repoTema.actualizarTema(datos);
+            return RedirectToAction("DatosTemas");
         }
 
     }

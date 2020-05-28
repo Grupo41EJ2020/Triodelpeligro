@@ -39,10 +39,10 @@ CREATE TABLE Curso_Tema_Video(
 
 ----Store Procedure: insertar
 go
-CREATE PROCEDURE SP_TEMA_INSERTAR
-	@Nombre nvarchar(100)
-	AS
-	BEGIN
+CREATE PROCEDURE sp_Tema_Insertar
+	@Nombre nvarchar(200)
+AS
+BEGIN
 	INSERT INTO Tema(Nombre)
 	VALUES(@Nombre)
 END;

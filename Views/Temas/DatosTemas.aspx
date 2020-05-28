@@ -22,9 +22,9 @@
     
         <tr>
             <td>
-                <%: Html.ActionLink("Editar", "Edit", new { id=item.IdTema }) %> |
-                <%: Html.ActionLink("Detalles", "Details", new { id=item.IdTema })%> |
-                <%: Html.ActionLink("Borrar", "Delete", new { id=item.IdTema})%>
+                <%: Html.ActionLink("Editar", "EditarTema", new { id=item.IdTema }) %> |
+                <%: Html.ActionLink("Detalles", "DetallesTema", new { id=item.IdTema })%> |
+                <%: Html.ActionLink("Borrar", "EliminarTemas", new { id=item.IdTema})%>
             </td>
             <td>
                 <%: item.IdTema %>
