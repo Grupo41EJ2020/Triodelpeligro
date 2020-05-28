@@ -80,6 +80,7 @@
     <Compile Include="Models\IEmpleado.cs" />
     <Compile Include="Models\ITema.cs" />
     <Compile Include="Models\IVideo.cs" />
+    <Compile Include="Models\RepositorioCurso_Tema_Video.cs" />
     <Compile Include="Models\RepositorioEmpleados.cs" />
     <Compile Include="Models\RepositorioTemas.cs" />
     <Compile Include="Models\RepositorioVideo.cs" />
