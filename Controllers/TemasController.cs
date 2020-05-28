@@ -15,10 +15,6 @@ namespace MVCLaboratorio.Controllers
 
         RepositorioTemas repoTema = new RepositorioTemas();
 
-        public ActionResult Index()
-        {
-            return View();
-        }
         public ActionResult DatosTemas()
         {
             return View(repoTema.obtenerTemas());

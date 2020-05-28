@@ -241,3 +241,62 @@ values('Build a Brain Computer App with React Native (Part 7) - Live Coding with
 go
 insert into Video(Nombre,url,FechaPublicacion)
 values('Data Analysis with Python - Full Course for Beginners (Numpy, Pandas, Matplotlib, Seaborn)','https://www.youtube.com/embed/r-uOLxNrNk8',CONVERT(datetime, '19/04/2020 19:36:40', 103) )
+
+--Stored Procedure: Insertar
+go
+CREATE PROCEDURE sp_CursoTema_Insertar
+	@IdCurso int,
+	@IdTema int
+AS
+BEGIN
+	INSERT INTO Curso_Tema(IdCurso,IdTema)
+	VALUES(@IdCurso,@IdTema)
+END;
+GO
+
+
+---Stored procedure: Actualizar
+GO
+CREATE PROCEDURE sp_CursoTema_Actualizar
+	@IdCT int,
+	@IdCurso int,
+	@IdTema int
+AS
+BEGIN
+	UPDATE Curso_Tema SET IdCurso = @IdCurso, IdTema = @IdTema 
+	WHERE IdCT = @IdCT
+END;
+go
+
+-- Stored procedure: Eliminar
+GO
+CREATE PROCEDURE sp_CursoTema_Eliminar
+	@IdCT int
+AS
+BEGIN
+	DELETE FROM Curso_Tema
+	WHERE IdCT = @IdCT
+END;
+go
+
+
+--Stored Procedure: Ver todos
+GO
+CREATE PROCEDURE sp_CursoTema_ConsultarTodo
+AS
+BEGIN
+	SELECT * FROM Curso_Tema
+END;
+go
+
+
+--Stored Procedure: Ver uno
+Go
+CREATE PROCEDURE sp_CursoTema_ConsultarPorID
+@IdCT int
+AS
+BEGIN
+	SELECT * FROM Curso_Tema
+	WHERE IdCT = @IdCT
+END;
+go
