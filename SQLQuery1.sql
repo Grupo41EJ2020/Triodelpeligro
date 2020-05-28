@@ -95,13 +95,13 @@ END;
 go
 
 CREATE PROCEDURE sp_Empleado_Insertar
-	@IdEmpleado int,
+
 	@Nombre nvarchar(100),
 	@Direccion nvarchar(100)
 AS
 BEGIN
-	INSERT INTO Empleado (IdEmpleado,Nombre,Direccion)
-	VALUES (@IdEmpleado,@Nombre,@Direccion)
+	INSERT INTO Empleado (Nombre,Direccion)
+	VALUES (@Nombre,@Direccion)
 END;
 print('--Script Finalizado--')
 go

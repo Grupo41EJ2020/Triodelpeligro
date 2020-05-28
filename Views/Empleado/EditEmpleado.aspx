@@ -38,7 +38,7 @@
     <% } %>
 
     <div>
-        <%: Html.ActionLink("Regresar", "Empleado") %>
+        <%: Html.ActionLink("Regresar", "DatosEmpleados") %>
     </div>
 
 </body>

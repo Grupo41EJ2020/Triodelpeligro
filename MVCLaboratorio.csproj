@@ -75,8 +75,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Empleado.cs" />
+    <Compile Include="Models\IEmpleado.cs" />
     <Compile Include="Models\ITema.cs" />
     <Compile Include="Models\IVideo.cs" />
+    <Compile Include="Models\RepositorioEmpleados.cs" />
     <Compile Include="Models\RepositorioTemas.cs" />
     <Compile Include="Models\RepositorioVideo.cs" />
     <Compile Include="Models\Tema.cs" />
