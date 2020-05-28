@@ -86,5 +86,27 @@ namespace MVCLaboratorio.Models
 
             BaseHelper.ejecutarConsulta("SP_CURSO_TEMA_VIDEO_EDITAR", CommandType.StoredProcedure, parametros);
         }
+
+        public List<Curso_Tema_Video> obtenerCurso_Tema_Video()
+        {
+            DataTable dtCurso_Tema_Videos = BaseHelper.ejecutarConsulta("SP_CURSO_TEMA_VIDEO_CONSULTAR_TODO", CommandType.StoredProcedure);
+
+            List<Curso_Tema_Video> lstCurso_Tema_Videos = new List<Curso_Tema_Video>();
+
+            //convertir el DataTable en List<Curso_Tema_Video> 
+
+            foreach (DataRow item in dtCurso_Tema_Videos.Rows)
+            {
+                Curso_Tema_Video datosCurso_Tema_Video = new Curso_Tema_Video();
+
+                datosCurso_Tema_Video.IdCTV = int.Parse(item["IdCTV"].ToString());
+                datosCurso_Tema_Video.IdCT = int.Parse(item["IdCT"].ToString());
+                datosCurso_Tema_Video.IdVideo = int.Parse(item["IdVideo"].ToString());
+
+                lstCurso_Tema_Videos.Add(datosCurso_Tema_Video);
+
+            }
+            return lstCurso_Tema_Videos;
+        }
     }
 }

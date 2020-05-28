@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MVCLaboratorio.Models;
+using MVCLaboratorio.Utilerias;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace MVCLaboratorio.Controllers
 {
@@ -45,7 +49,7 @@ namespace MVCLaboratorio.Controllers
         [HttpPost]
         public ActionResult Curso_Tema_VideoEdit(int id, Curso_Tema_Video datos)
         {
-            datos.IdCurso_Tema_Video = id;
+            datos.IdCTV = id;
             repoCurso_Tema_Video.actualizarCurso_Tema_Video(datos);
             return RedirectToAction("Curso_Tema_Video");
         }

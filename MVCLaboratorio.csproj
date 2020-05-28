@@ -84,13 +84,10 @@
     <Compile Include="Models\IVideo.cs" />
     <Compile Include="Models\RepositorioCursoTema.cs" />
     <Compile Include="Models\Curso.cs" />
-    <Compile Include="Models\Empleado.cs" />
     <Compile Include="Models\ICurso.cs" />
     <Compile Include="Models\Curso_Tema_Video.cs" />
     <Compile Include="Models\ICurso_Tema_Video.cs" />
     <Compile Include="Models\IEmpleado.cs" />
-    <Compile Include="Models\ITema.cs" />
-    <Compile Include="Models\IVideo.cs" />
     <Compile Include="Models\RepositorioCurso_Tema_Video.cs" />
     <Compile Include="Models\RepositorioCursos.cs" />
     <Compile Include="Models\RepositorioEmpleados.cs" />
