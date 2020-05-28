@@ -24,7 +24,7 @@
     <% using (Html.BeginForm()) { %>
         <p>
 		    <input type="submit" value="Borrar" /> |
-		    <%: Html.ActionLink("Back to List", "Empleado") %>
+		    <%: Html.ActionLink("Back to List", "DatosEmpleados") %>
         </p>
     <% } %>
 
