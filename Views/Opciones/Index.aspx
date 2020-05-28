@@ -7,17 +7,21 @@
     <title>Index</title>
 </head>
 <body>
-    <div>
     <h1>Elija opcion</h1>
-        <a href="/Temas/DatosTemas">Ir a Temas</a>
-    </div>
-     
-     
-       <a href="/Empleado/DatosEmpleados">Ir a Empleados</a>
-    <br />  
+    <a href="/Temas/DatosTemas">Ir a Temas</a>
+    <br />
+    <br />
+    <a href="/Empleado/DatosEmpleados">Ir a Empleados</a>
+    <br />
+    <br />
     <a href="/Video/Video">Ir a Videos</a>
-
+    <br />
+    <br />
     <a href="/Curso/DatosCursos">Ir a Cursos</a>
+    <br />
+    <br />
+    <a href="/CursoTema/Index"> ir a curso tema</a>
+    
     
 </body>
 </html>

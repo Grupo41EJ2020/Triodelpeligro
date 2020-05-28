@@ -156,16 +156,17 @@ go
 GO
 
 CREATE PROCEDURE sp_Curso_Insertar
-	@IdCurso int,
 	@Descripcion nvarchar(200),
 	@IdEmpleado nvarchar(100)
 AS
 BEGIN
-	INSERT INTO Curso (IdCurso,Descripcion,IdEmpleado)
-	VALUES (@IdCurso,@Descripcion,@IdEmpleado)
+	INSERT INTO Curso (Descripcion,IdEmpleado)
+	VALUES (@Descripcion,@IdEmpleado)
 END;
 print('--Script Finalizado--')
 go
+drop procedure sp_Curso_Insertar
+
 CREATE PROCEDURE sp_Curso_Eliminar
 	@IdCurso int
 AS
@@ -242,6 +243,66 @@ go
 insert into Video(Nombre,url,FechaPublicacion)
 values('Data Analysis with Python - Full Course for Beginners (Numpy, Pandas, Matplotlib, Seaborn)','https://www.youtube.com/embed/r-uOLxNrNk8',CONVERT(datetime, '19/04/2020 19:36:40', 103) )
 
+<<<<<<< HEAD
+--Stored Procedure: Insertar
+go
+CREATE PROCEDURE sp_CursoTema_Insertar
+	@IdCurso int,
+	@IdTema int
+AS
+BEGIN
+	INSERT INTO Curso_Tema(IdCurso,IdTema)
+	VALUES(@IdCurso,@IdTema)
+END;
+GO
+
+
+---Stored procedure: Actualizar
+GO
+CREATE PROCEDURE sp_CursoTema_Actualizar
+	@IdCT int,
+	@IdCurso int,
+	@IdTema int
+AS
+BEGIN
+	UPDATE Curso_Tema SET IdCurso = @IdCurso, IdTema = @IdTema 
+	WHERE IdCT = @IdCT
+END;
+go
+
+-- Stored procedure: Eliminar
+GO
+CREATE PROCEDURE sp_CursoTema_Eliminar
+	@IdCT int
+AS
+BEGIN
+	DELETE FROM Curso_Tema
+	WHERE IdCT = @IdCT
+END;
+go
+
+
+--Stored Procedure: Ver todos
+GO
+CREATE PROCEDURE sp_CursoTema_ConsultarTodo
+AS
+BEGIN
+	SELECT * FROM Curso_Tema
+END;
+go
+
+
+--Stored Procedure: Ver uno
+Go
+CREATE PROCEDURE sp_CursoTema_ConsultarPorID
+@IdCT int
+AS
+BEGIN
+	SELECT * FROM Curso_Tema
+	WHERE IdCT = @IdCT
+END;
+go
+=======
 GO
 --STOREDS PROCEDURES CURSO_TEMA_VIDEO--
 CREATE PROCEDURE SP_CURSO_TEMA_VIDEO_INSERTAR
@@ -289,3 +350,4 @@ AS
 BEGIN
 SELECT * FROM Curso_Tema_Video WHERE IdCTV = @IdCTV
 END;
+>>>>>>> 840749c018853c73f8c7a7a94445f2bdc737455c
