@@ -62,7 +62,13 @@ namespace MVCLaboratorio.Models
 
         public void insertarVideo(Video datosVideo)
         {
-            throw new NotImplementedException();
+            //realizar el insert
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(new SqlParameter("@Nombre", datosVideo.Nombre));
+            parametros.Add(new SqlParameter("@Url", datosVideo.Url));
+            parametros.Add(new SqlParameter("@FechaPublicacion", datosVideo.FechaPublicacion));
+
+            BaseHelper.ejecutarConsulta("sp_Video_Insertar", CommandType.StoredProcedure, parametros);
         }
 
         public void eliminarVideo(int idVideo)
