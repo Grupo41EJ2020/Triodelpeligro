@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+
 using System.Data.SqlClient;
 using System.Data;
 using MVCLaboratorio.Utilerias;
@@ -12,62 +13,47 @@ namespace MVCLaboratorio.Controllers
 {
     public class VideoController : Controller
     {
-        //
-        // GET: /Video/
-
         RepositorioVideo repoVideo = new RepositorioVideo();
 
         public ActionResult Index()
         {
             return View();
         }
-
-        public ActionResult Quique07DsConsultarTodo()
+       
+        public ActionResult Video()
         {
             return View(repoVideo.obtenerVideos());
         }
 
-        public ActionResult Quique07DsDetails(int id)
+        public ActionResult VideoDetails(int id)
         {
             return View(repoVideo.obtenerVideo(id));
         }
 
-        public ActionResult Quique07DsDelete(int id)
+        public ActionResult VideoDelete(int id)
         {
             return View(repoVideo.obtenerVideo(id));
         }
 
         [HttpPost]
-        public ActionResult Quique07DsDelete(int id, FormCollection frm)
+        public ActionResult VideoDelete(int id, FormCollection frm)
         {
             repoVideo.eliminarVideo(id);
-            return RedirectToAction("Quique07Ds");
+            return RedirectToAction("Video");
         }
 
-        public ActionResult Quique07DsEdit(int id)
+        public ActionResult VideoEdit(int id)
         {
             return View(repoVideo.obtenerVideo(id));
         }
 
         [HttpPost]
-        public ActionResult Quique07DsEdit(int id, Video datos)
+        public ActionResult VideoEdit(int id, Video datos)
         {
             datos.IdVideo = id;
             repoVideo.actualizarVideo(datos);
-            return RedirectToAction("Quique07Ds");
+            return RedirectToAction("Video");
         }
 
-        public ActionResult Quique07DsInsert(int id)
-        {
-            return View(repoVideo.obtenerVideo(id));
-        }
-
-        [HttpPost]
-        public ActionResult Quique07DsInsert(int id, Video datos)
-        {
-            datos.IdVideo = id;
-            repoVideo.insertarVideo(datos);
-            return RedirectToAction("Quique07Ds");
-        }
     }
 }

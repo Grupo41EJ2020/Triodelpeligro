@@ -14,8 +14,9 @@
      
      
        <a href="/Empleado/DatosEmpleados">Ir a Empleados</a>
-    </div>
-   </div>
+    <br />  
+    <a href="/Video/Video">Ir a Videos</a>
+
     <a href="/Curso/DatosCursos">Ir a Cursos</a>
     
 </body>
