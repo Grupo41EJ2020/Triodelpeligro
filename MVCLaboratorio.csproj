@@ -66,12 +66,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OpcionesController.cs" />
     <Compile Include="Controllers\TemasController.cs" />
+    <Compile Include="Controllers\VideoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Empleado.cs" />
     <Compile Include="Models\ITema.cs" />
     <Compile Include="Models\IVideo.cs" />
     <Compile Include="Models\RepositorioTemas.cs" />
@@ -85,9 +88,13 @@
     <Content Include="Content\imagenes\fondo_vista 1.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+<<<<<<< HEAD
     <Content Include="obj\Debug\MVCLaboratorio.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\MVCLaboratorio.dll" />
     <Content Include="obj\Debug\MVCLaboratorio.pdb" />
+=======
+    <Content Include="Views\Empleado\DatosEmpleados.aspx" />
+>>>>>>> b96cfe0815f9619fe95825add39005ebefc289c0
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Opciones\Index.aspx" />
     <Content Include="Views\Temas\DatosTemas.aspx" />
@@ -95,7 +102,10 @@
     <Content Include="Views\Temas\EditarTema.aspx" />
     <Content Include="Views\Temas\EliminarTemas.aspx" />
     <Content Include="Views\Temas\InsertarTemas.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Views\Video\Video.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

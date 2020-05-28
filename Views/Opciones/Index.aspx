@@ -11,5 +11,13 @@
     <h1>Elija opcion</h1>
         <a href="/Temas/DatosTemas">Ir a Temas</a>
     </div>
+     
+     
+       <a href="/Empleado/DatosEmpleados">Ir a Empleados</a>
+    <br />  
+    <a href="/Video/Video">Ir a Videos</a>
+
+    <a href="/Curso/DatosCursos">Ir a Cursos</a>
+    
 </body>
 </html>
