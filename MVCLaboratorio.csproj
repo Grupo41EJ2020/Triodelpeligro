@@ -75,8 +75,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Empleado.cs" />
+    <Compile Include="Models\IEmpleado.cs" />
     <Compile Include="Models\ITema.cs" />
     <Compile Include="Models\IVideo.cs" />
+    <Compile Include="Models\RepositorioEmpleados.cs" />
     <Compile Include="Models\RepositorioTemas.cs" />
     <Compile Include="Models\RepositorioVideo.cs" />
     <Compile Include="Models\Tema.cs" />
@@ -88,18 +90,14 @@
     <Content Include="Content\imagenes\fondo_vista 1.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-
     <Content Include="Views\Empleado\CreateEmpleado.aspx" />
     <Content Include="Views\Empleado\DatosEmpleados.aspx" />
     <Content Include="Views\Empleado\DeleteEmpleado.aspx" />
     <Content Include="Views\Empleado\DetailsEmpleado.aspx" />
     <Content Include="Views\Empleado\EditEmpleado.aspx" />
-
-
     <Content Include="obj\Debug\MVCLaboratorio.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\MVCLaboratorio.dll" />
     <Content Include="obj\Debug\MVCLaboratorio.pdb" />
-
     <Content Include="Views\Empleado\DatosEmpleados.aspx" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Opciones\Index.aspx" />
@@ -133,19 +131,15 @@
     <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
-
-  <ItemGroup />
-
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="Views\Shared\" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\MVCLaboratorio.csprojResolveAssemblyReference.cache" />
   </ItemGroup>
-
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
