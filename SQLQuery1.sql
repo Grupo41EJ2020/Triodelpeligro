@@ -95,13 +95,13 @@ END;
 go
 
 CREATE PROCEDURE sp_Empleado_Insertar
-	@IdEmpleado int,
+
 	@Nombre nvarchar(100),
 	@Direccion nvarchar(100)
 AS
 BEGIN
-	INSERT INTO Empleado (IdEmpleado,Nombre,Direccion)
-	VALUES (@IdEmpleado,@Nombre,@Direccion)
+	INSERT INTO Empleado (Nombre,Direccion)
+	VALUES (@Nombre,@Direccion)
 END;
 print('--Script Finalizado--')
 go
@@ -156,16 +156,17 @@ go
 GO
 
 CREATE PROCEDURE sp_Curso_Insertar
-	@IdCurso int,
 	@Descripcion nvarchar(200),
 	@IdEmpleado nvarchar(100)
 AS
 BEGIN
-	INSERT INTO Curso (IdCurso,Descripcion,IdEmpleado)
-	VALUES (@IdCurso,@Descripcion,@IdEmpleado)
+	INSERT INTO Curso (Descripcion,IdEmpleado)
+	VALUES (@Descripcion,@IdEmpleado)
 END;
 print('--Script Finalizado--')
 go
+drop procedure sp_Curso_Insertar
+
 CREATE PROCEDURE sp_Curso_Eliminar
 	@IdCurso int
 AS
@@ -242,6 +243,7 @@ go
 insert into Video(Nombre,url,FechaPublicacion)
 values('Data Analysis with Python - Full Course for Beginners (Numpy, Pandas, Matplotlib, Seaborn)','https://www.youtube.com/embed/r-uOLxNrNk8',CONVERT(datetime, '19/04/2020 19:36:40', 103) )
 
+<<<<<<< HEAD
 --Stored Procedure: Insertar
 go
 CREATE PROCEDURE sp_CursoTema_Insertar
@@ -300,3 +302,52 @@ BEGIN
 	WHERE IdCT = @IdCT
 END;
 go
+=======
+GO
+--STOREDS PROCEDURES CURSO_TEMA_VIDEO--
+CREATE PROCEDURE SP_CURSO_TEMA_VIDEO_INSERTAR
+@IdCT int,
+@IdVideo int
+AS
+BEGIN
+INSERT INTO Curso_Tema_Video(IdCT, IdVideo)
+VALUES(@IdCT, @IdVideo)
+END;
+
+GO
+
+CREATE PROCEDURE SP_CURSO_TEMA_VIDEO_EDITAR
+@IdCTV int,
+@IdCT int,
+@IdVideo INT
+AS
+BEGIN
+UPDATE Curso_Tema_Video SET IdCT = @IdCT, IdVideo = @IdVideo WHERE IdCTV = @IdCTV
+END;
+
+GO
+
+CREATE PROCEDURE SP_CURSO_TEMA_VIDEO_BORRAR
+@IdCTV INT
+AS
+BEGIN
+DELETE FROM Curso_Tema_Video WHERE IdCTV = @IdCTV
+END;
+
+GO
+
+CREATE PROCEDURE SP_CURSO_TEMA_VIDEO_CONSULTAR_TODO
+AS
+BEGIN
+SELECT * FROM Curso_Tema_Video
+END;
+
+GO
+
+CREATE PROCEDURE SP_CURSO_TEMA_VIDEO_CONSULTAR_POR_ID
+@IdCTV INT
+AS
+BEGIN
+SELECT * FROM Curso_Tema_Video WHERE IdCTV = @IdCTV
+END;
+>>>>>>> 840749c018853c73f8c7a7a94445f2bdc737455c

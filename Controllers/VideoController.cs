@@ -55,5 +55,16 @@ namespace MVCLaboratorio.Controllers
             return RedirectToAction("Video");
         }
 
+        public ActionResult VideoInsert()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult VideoInsert(Video datos)
+        {
+            repoVideo.insertarVideo(datos);
+            return RedirectToAction("Video");
+        }
     }
 }
