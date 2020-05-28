@@ -66,11 +66,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="Controllers\CursoTemaController.cs" />
-=======
     <Compile Include="Controllers\CursoController.cs" />
->>>>>>> 840749c018853c73f8c7a7a94445f2bdc737455c
+    <Compile Include="Controllers\Curso_Tema_VideoController.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OpcionesController.cs" />
@@ -79,14 +77,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Models\CursoTema.cs" />
     <Compile Include="Models\Empleado.cs" />
     <Compile Include="Models\ICursoTema.cs" />
     <Compile Include="Models\ITema.cs" />
     <Compile Include="Models\IVideo.cs" />
     <Compile Include="Models\RepositorioCursoTema.cs" />
-=======
     <Compile Include="Models\Curso.cs" />
     <Compile Include="Models\Empleado.cs" />
     <Compile Include="Models\ICurso.cs" />
@@ -96,13 +92,9 @@
     <Compile Include="Models\IEmpleado.cs" />
     <Compile Include="Models\ITema.cs" />
     <Compile Include="Models\IVideo.cs" />
-<<<<<<< HEAD
     <Compile Include="Models\RepositorioCurso_Tema_Video.cs" />
-=======
     <Compile Include="Models\RepositorioCursos.cs" />
->>>>>>> 8b4d7957cdd95b36e48a2c3f1b9a52dc0ebc1431
     <Compile Include="Models\RepositorioEmpleados.cs" />
->>>>>>> 840749c018853c73f8c7a7a94445f2bdc737455c
     <Compile Include="Models\RepositorioTemas.cs" />
     <Compile Include="Models\RepositorioVideo.cs" />
     <Compile Include="Models\Tema.cs" />
@@ -114,15 +106,12 @@
     <Content Include="Content\imagenes\fondo_vista 1.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-<<<<<<< HEAD
     <Content Include="SQLQuery1.sql" />
     <Content Include="Views\CursoTema\ActualizarCursoTema.aspx" />
     <Content Include="Views\CursoTema\DetallesCursoTema.aspx" />
     <Content Include="Views\CursoTema\EliminarCursoTema.aspx" />
     <Content Include="Views\CursoTema\Index.aspx" />
     <Content Include="Views\CursoTema\InsertarCursoTema.aspx" />
-=======
->>>>>>> 840749c018853c73f8c7a7a94445f2bdc737455c
     <Content Include="Views\Empleado\CreateEmpleado.aspx" />
     <Content Include="Views\Empleado\DatosEmpleados.aspx" />
     <Content Include="Views\Empleado\DeleteEmpleado.aspx" />

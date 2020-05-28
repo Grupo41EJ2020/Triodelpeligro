@@ -11,7 +11,7 @@ namespace MVCLaboratorio.Models
 {
     public class RepositorioCurso_Tema_Video : ICurso_Tema_Video
     {
-        public List<Curso_Tema_Video> obtenerCurso_Tema_Video()
+        public List<Curso_Tema_Video> obtenerCurso_Tema_Videos()
         {
             //obtener todos los Curso_Tema_Videos
             DataTable dtCurso_Tema_Videos = BaseHelper.ejecutarConsulta("SP_CURSO_TEMA_VIDEO_CONSULTAR_TODO", CommandType.StoredProcedure);
