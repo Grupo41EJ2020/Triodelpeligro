@@ -40,7 +40,7 @@ namespace MVCLaboratorio.Models
         {
             //consultar los datos del video
             List<SqlParameter> parametros = new List<SqlParameter>();
-            parametros.Add(new SqlParameter("@IdVideo", Video));
+            parametros.Add(new SqlParameter("@IdVideo", idVideo));
 
             DataTable dtVideo = BaseHelper.ejecutarConsulta("sp_Video_ConsultarPorID", CommandType.StoredProcedure, parametros);
 
