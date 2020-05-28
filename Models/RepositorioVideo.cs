@@ -36,7 +36,7 @@ namespace MVCLaboratorio.Models
             return lstvideos;
         }
 
-        public Video obtenerVideo(int Video)
+        public Video obtenerVideo(int idVideo)
         {
             //consultar los datos del video
             List<SqlParameter> parametros = new List<SqlParameter>();
