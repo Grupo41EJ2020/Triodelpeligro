@@ -156,16 +156,17 @@ go
 GO
 
 CREATE PROCEDURE sp_Curso_Insertar
-	@IdCurso int,
 	@Descripcion nvarchar(200),
 	@IdEmpleado nvarchar(100)
 AS
 BEGIN
-	INSERT INTO Curso (IdCurso,Descripcion,IdEmpleado)
-	VALUES (@IdCurso,@Descripcion,@IdEmpleado)
+	INSERT INTO Curso (Descripcion,IdEmpleado)
+	VALUES (@Descripcion,@IdEmpleado)
 END;
 print('--Script Finalizado--')
 go
+drop procedure sp_Curso_Insertar
+
 CREATE PROCEDURE sp_Curso_Eliminar
 	@IdCurso int
 AS
