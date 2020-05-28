@@ -4,12 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>InsertarTemas</title>
+    <title>EditarTema</title>
 </head>
 <body>
     <% using (Html.BeginForm()) {%>
         <%: Html.ValidationSummary(true) %>
-
+        
         <fieldset>
             <legend>Datos</legend>
             <div class="editor-label">
@@ -21,7 +21,7 @@
             </div>
             
             <p>
-                <input type="submit" value="Insertar" />
+                <input type="submit" value="Guardar" />
             </p>
         </fieldset>
 

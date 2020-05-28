@@ -39,10 +39,10 @@ CREATE TABLE Curso_Tema_Video(
 
 ----Store Procedure: insertar
 go
-CREATE PROCEDURE SP_TEMA_INSERTAR
-	@Nombre nvarchar(100)
-	AS
-	BEGIN
+CREATE PROCEDURE sp_Tema_Insertar
+	@Nombre nvarchar(200)
+AS
+BEGIN
 	INSERT INTO Tema(Nombre)
 	VALUES(@Nombre)
 END;
@@ -234,3 +234,10 @@ BEGIN
 	WHERE IdVideo = @IdVideo
 END;
 print('--Script Finalizado--')
+
+--inserts video--
+insert into Video(Nombre,url,FechaPublicacion)
+values('Build a Brain Computer App with React Native (Part 7) - Live Coding with Jesse','https://www.youtube.com/embed/W6BzxdHBBHM',CONVERT(datetime, '19/04/2020 19:36:40', 103) )
+go
+insert into Video(Nombre,url,FechaPublicacion)
+values('Data Analysis with Python - Full Course for Beginners (Numpy, Pandas, Matplotlib, Seaborn)','https://www.youtube.com/embed/r-uOLxNrNk8',CONVERT(datetime, '19/04/2020 19:36:40', 103) )

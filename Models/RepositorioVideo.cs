@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+
 using MVCLaboratorio.Models;
 using System.Data;
 using System.Data.SqlClient;
 using MVCLaboratorio.Utilerias;
-
 namespace MVCLaboratorio.Models
 {
     public class RepositorioVideo : IVideo
@@ -36,7 +36,7 @@ namespace MVCLaboratorio.Models
             return lstvideos;
         }
 
-        public Video obtenerVideo(int Video)
+        public Video obtenerVideo(int idVideo)
         {
             //consultar los datos del video
             List<SqlParameter> parametros = new List<SqlParameter>();
@@ -62,13 +62,7 @@ namespace MVCLaboratorio.Models
 
         public void insertarVideo(Video datosVideo)
         {
-            //realizar el insert
-            List<SqlParameter> parametros = new List<SqlParameter>();
-            parametros.Add(new SqlParameter("@Nombre", datosVideo.Nombre));
-            parametros.Add(new SqlParameter("@Url", datosVideo.Url));
-            parametros.Add(new SqlParameter("@FechaPublicacion", datosVideo.FechaPublicacion));
-
-            BaseHelper.ejecutarConsulta("sp_Video_Insertar", CommandType.StoredProcedure, parametros);
+            throw new NotImplementedException();
         }
 
         public void eliminarVideo(int idVideo)

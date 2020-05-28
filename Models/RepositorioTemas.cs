@@ -29,20 +29,23 @@ namespace MVCLaboratorio.Models
 
         public Tema obtenerTema(int idTema)
         {
+            
             List<SqlParameter> parametros = new List<SqlParameter>();
             parametros.Add(new SqlParameter("@IdTema", idTema));
-            DataTable dtTemas = BaseHelper.ejecutarConsulta("sp_Tema_ConsultarPorID", CommandType.StoredProcedure);
 
-            Tema MiTema = new Tema();
+            DataTable dtTema = BaseHelper.ejecutarConsulta("sp_Tema_ConsultarPorID", CommandType.StoredProcedure, parametros);
 
-            if (dtTemas.Rows.Count > 0)
+            Tema miTema = new Tema();
+
+            if (dtTema.Rows.Count > 0)
             {
-                MiTema.IdTema = int.Parse(dtTemas.Rows[0]["IdTema"].ToString());
-                MiTema.Nombre = dtTemas.Rows[0]["Nombre"].ToString();
-                return MiTema;
+                miTema.IdTema = int.Parse(dtTema.Rows[0]["IdTema"].ToString());
+                miTema.Nombre = dtTema.Rows[0]["Nombre"].ToString();
+
+                return miTema;
             }
             else
-            {
+            {  
                 return null;
             }
         }
@@ -50,25 +53,23 @@ namespace MVCLaboratorio.Models
         public void insertarTema(Tema datosTema)
         {
             List<SqlParameter> parametros = new List<SqlParameter>();
-            parametros.Add(new SqlParameter("@IdVideo", datosTema.IdTema));
             parametros.Add(new SqlParameter("@Nombre", datosTema.Nombre));
 
-            BaseHelper.ejecutarConsulta("SP_TEMA_INSERTAR", CommandType.StoredProcedure, parametros);
+            BaseHelper.ejecutarConsulta("sp_Tema_Insertar", CommandType.StoredProcedure, parametros);
         }
 
         public void eliminarTema(int idTema)
         {
             List<SqlParameter> parametros = new List<SqlParameter>();
-            parametros.Add(new SqlParameter("@IdVideo", idTema));
+            parametros.Add(new SqlParameter("@IdTema", idTema));
 
             BaseHelper.ejecutarConsulta("sp_Tema_Eliminar", CommandType.StoredProcedure, parametros);
         }
 
         public void actualizarTema(Tema datosTema)
         {
-            //realizar el update
             List<SqlParameter> parametros = new List<SqlParameter>();
-            parametros.Add(new SqlParameter("@IdVideo", datosTema.IdTema));
+            parametros.Add(new SqlParameter("@IdTema", datosTema.IdTema));
             parametros.Add(new SqlParameter("@Nombre", datosTema.Nombre));
 
             BaseHelper.ejecutarConsulta("sp_Tema_Actualizar", CommandType.StoredProcedure, parametros);
