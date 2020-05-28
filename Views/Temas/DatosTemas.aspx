@@ -40,6 +40,8 @@
 
     <p>
         <%: Html.ActionLink("Crear nuevo", "InsertarTemas") %>
+        <br />
+        <a href="/Opciones/Index">Regresar a otras Opciones</a>
     </p>
 
 </body>
