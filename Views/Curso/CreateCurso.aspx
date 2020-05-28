@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage<MVCLaboratorio.Models.Empleado>" %>
+﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage<MVCLaboratorio.Models.Curso>" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>CreateEmpleado</title>
+    <title>CreateCurso</title>
 </head>
 <body>
     <% using (Html.BeginForm()) {%>
@@ -13,33 +13,31 @@
         <fieldset>
             <legend>Fields</legend>
             
-            
-            
             <div class="editor-label">
-                <%: Html.LabelFor(model => model.Nombre) %>
+                <%: Html.LabelFor(model => model.Descripcion) %>
             </div>
             <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.Nombre) %>
-                <%: Html.ValidationMessageFor(model => model.Nombre) %>
+                <%: Html.TextBoxFor(model => model.Descripcion) %>
+                <%: Html.ValidationMessageFor(model => model.Descripcion) %>
             </div>
             
             <div class="editor-label">
-                <%: Html.LabelFor(model => model.Direccion) %>
+                <%: Html.LabelFor(model => model.IdEmpleado) %>
             </div>
             <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.Direccion) %>
-                <%: Html.ValidationMessageFor(model => model.Direccion) %>
+                <%: Html.TextBoxFor(model => model.IdEmpleado) %>
+                <%: Html.ValidationMessageFor(model => model.IdEmpleado) %>
             </div>
             
             <p>
-                <input type="submit" value="Registar" />
+                <input type="submit" value="Registrar" />
             </p>
         </fieldset>
 
     <% } %>
 
     <div>
-        <%: Html.ActionLink("Regresar a Empleados", "DatosEmpleados") %>
+        <%: Html.ActionLink("Regresar a Cursos", "DatosCursos") %>
     </div>
 
 </body>

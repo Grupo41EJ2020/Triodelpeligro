@@ -23,7 +23,7 @@ namespace MVCLaboratorio.Models
 
                 datosCurso.IdCurso = int.Parse(item["IdCurso"].ToString());
                 datosCurso.Descripcion = item["Descripcion"].ToString();
-                datosCurso.IdEmpleado = item["IdEmpleado"].ToString();
+                datosCurso.IdEmpleado = int.Parse(item["IdEmpleado"].ToString());
                 lstcursos.Add(datosCurso);
             }
             return lstcursos;
@@ -40,7 +40,7 @@ namespace MVCLaboratorio.Models
             {
                 miCurso.IdCurso = int.Parse(dtCurso.Rows[0]["IdCurso"].ToString());
                 miCurso.Descripcion = dtCurso.Rows[0]["Descripcion"].ToString();
-                miCurso.IdCurso = int.Parse(dtCurso.Rows[0]["IdEmpleado"].ToString());
+                miCurso.IdEmpleado = int.Parse(dtCurso.Rows[0]["IdEmpleado"].ToString());
                 return miCurso;
             }
             else
