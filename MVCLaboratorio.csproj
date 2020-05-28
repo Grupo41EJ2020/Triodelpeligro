@@ -108,6 +108,10 @@
     <Content Include="Views\Temas\EliminarTemas.aspx" />
     <Content Include="Views\Temas\InsertarTemas.aspx" />
     <Content Include="Views\Video\Video.aspx" />
+    <Content Include="Views\Video\VideoDelete.aspx" />
+    <Content Include="Views\Video\VideoDetails.aspx" />
+    <Content Include="Views\Video\VideoEdit.aspx" />
+    <Content Include="Views\Video\VideoInsert.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
