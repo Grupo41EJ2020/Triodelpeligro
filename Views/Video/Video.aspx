@@ -6,7 +6,7 @@
 <head id="Head1" runat="server">
     <title>Video</title>
 </head>
-<body>
+<body bgcolor="#ffccff">
     <table>
         <tr>
             <th></th>
@@ -52,6 +52,8 @@
 
     <p>
         <%: Html.ActionLink("Crear Nuevo Video", "VideoInsert")%>
+        <br />  
+        <a href="/Opciones/Index">Regresar a otras Opciones</a>
     </p>
 
 </body>

@@ -6,7 +6,7 @@
 <head runat="server">
     <title>Curso_Tema_Video</title>
 </head>
-<body>
+<body bgcolor="#ffccff">
     <table>
         <tr>
             <th></th>
@@ -46,6 +46,8 @@
 
     <p>
         <%: Html.ActionLink("Crear Nuevo Curso Tema Video", "Curso_Tema_VideoInsert") %>
+        <br />  
+        <a href="/Opciones/Index">Regresar a otras Opciones</a>
     </p>
 
 </body>

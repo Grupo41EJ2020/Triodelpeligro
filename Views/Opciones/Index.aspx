@@ -6,8 +6,8 @@
 <head runat="server">
     <title>Index</title>
 </head>
-<body>
-    <h1>Elija opcion</h1>
+<body bgcolor="#3399ff">
+    <h1>Elija una opcion</h1>
     <a href="/Temas/DatosTemas">Ir a Temas</a>
     <br />
     <br />
@@ -24,6 +24,9 @@
     <br />  
     <br />  
     <a href="/Curso_Tema_Video/Curso_Tema_Video">Ir a Curso Tema Video</a>
+    <br />  
+    <br />  
+    <a href="/Home/Index">Regresar al Home</a>
     
 </body>
 </html>

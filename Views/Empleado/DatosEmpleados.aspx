@@ -6,7 +6,7 @@
 <head runat="server">
     <title>DatosEmpleados</title>
 </head>
-<body>
+<body bgcolor="#ffccff">
     <table>
         <tr>
             <th></th>
@@ -46,6 +46,8 @@
 
     <p>
         <%: Html.ActionLink("AgregarEmpleado", "CreateEmpleado") %>
+        <br />  
+        <a href="/Opciones/Index">Regresar a otras Opciones</a>
     </p>
 
 </body>

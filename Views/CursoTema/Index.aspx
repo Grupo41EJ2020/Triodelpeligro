@@ -6,7 +6,7 @@
 <head runat="server">
     <title>Index</title>
 </head>
-<body>
+<body bgcolor="#ffccff">
     <table>
         <tr>
             <th></th>

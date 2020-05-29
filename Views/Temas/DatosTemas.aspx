@@ -6,15 +6,15 @@
 <head runat="server">
     <title>DatosTemas</title>
 </head>
-<body>
+<body bgcolor="#ffccff">
     <table>
         <tr>
             <th></th>
             <th>
-                IdTema
+                <font color="black">IdTema</font>
             </th>
             <th>
-                Nombre
+                <font color="black">Nombre</font>
             </th>
         </tr>
 
@@ -22,15 +22,15 @@
     
         <tr>
             <td>
-                <%: Html.ActionLink("Editar", "EditarTema", new { id=item.IdTema }) %> |
+                <%: Html.ActionLink("Editar", "EditarTema", new { id=item.IdTema }) %>|
                 <%: Html.ActionLink("Detalles", "DetallesTema", new { id=item.IdTema })%> |
                 <%: Html.ActionLink("Borrar", "EliminarTemas", new { id=item.IdTema})%>
             </td>
             <td>
-                <%: item.IdTema %>
+               <font color="black"> <%: item.IdTema %></font>
             </td>
             <td>
-                <%: item.Nombre %>
+              <font color="black"><%: item.Nombre %></font>
             </td>
         </tr>
     
