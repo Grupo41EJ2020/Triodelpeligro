@@ -45,7 +45,7 @@
     </table>
 
     <p>
-        <%: Html.ActionLink("Crear Nuevo Curso Tema Video", "Crear") %>
+        <%: Html.ActionLink("Crear Nuevo Curso Tema Video", "Curso_Tema_VideoInsert") %>
     </p>
 
 </body>
