@@ -3,9 +3,15 @@ CREATE TABLE Empleado(
 	Nombre nvarchar(100),
 	Direccion nvarchar(100))
 
+INSERT INTO Empleado(Nombre, Direccion)
+VALUES('Juan Carlos', 'Santa Julia 902')
+
 CREATE TABLE Tema(
 	IdTema int primary key IDENTITY(1,1),
 	Nombre nvarchar(100))
+
+INSERT INTO Tema(Nombre)
+VALUES('C#')
 
 CREATE TABLE Video(
 	IdVideo int  primary key IDENTITY(1,1),
@@ -20,6 +26,11 @@ CREATE TABLE Curso(
 	constraint fk_idEmp FOREIGN KEY(IdEmpleado) REFERENCES Empleado(IdEmpleado)
 )
 
+SELECT * FROM Empleado
+
+INSERT INTO Curso(Descripcion, IdEmpleado)
+VALUES('Aprenda a programar', 10)
+
 CREATE TABLE Curso_Tema(
 	IdCT int  primary key IDENTITY(1,1),
 	IdCurso int,
@@ -28,6 +39,8 @@ CREATE TABLE Curso_Tema(
 	constraint fk_idTema FOREIGN KEY(IdTema) REFERENCES Tema(IdTema),
 )
 
+SELECT * FROM Curso_Tema
+
 CREATE TABLE Curso_Tema_Video(
 	IdCTV int primary key IDENTITY(1,1),
 	IdCT int,
@@ -35,6 +48,13 @@ CREATE TABLE Curso_Tema_Video(
 	constraint fk_idCT FOREIGN KEY(IdCT) REFERENCES Curso_Tema(IdCT),
 	constraint fk_idVideo FOREIGN KEY(IdVideo) REFERENCES Video(IdVideo),
 )
+
+SELECT * FROM Curso_Tema_Video
+
+SELECT * FROM Video
+
+INSERT INTO Curso_Tema_Video(IdCT, IdVideo)
+VALUES(14, 2)
 
 
 ----Store Procedure: insertar
@@ -243,7 +263,6 @@ go
 insert into Video(Nombre,url,FechaPublicacion)
 values('Data Analysis with Python - Full Course for Beginners (Numpy, Pandas, Matplotlib, Seaborn)','https://www.youtube.com/embed/r-uOLxNrNk8',CONVERT(datetime, '19/04/2020 19:36:40', 103) )
 
-<<<<<<< HEAD
 --Stored Procedure: Insertar
 go
 CREATE PROCEDURE sp_CursoTema_Insertar
