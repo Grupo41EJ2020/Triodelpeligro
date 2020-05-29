@@ -113,6 +113,11 @@
     <Content Include="Views\CursoTema\EliminarCursoTema.aspx" />
     <Content Include="Views\CursoTema\Index.aspx" />
     <Content Include="Views\CursoTema\InsertarCursoTema.aspx" />
+    <Content Include="Views\Curso_Tema_Video\Curso_Tema_Video.aspx" />
+    <Content Include="Views\Curso_Tema_Video\Curso_Tema_VideoDelete.aspx" />
+    <Content Include="Views\Curso_Tema_Video\Curso_Tema_VideoDetails.aspx" />
+    <Content Include="Views\Curso_Tema_Video\Curso_Tema_VideoEdit.aspx" />
+    <Content Include="Views\Curso_Tema_Video\Curso_Tema_VideoInsert.aspx" />
     <Content Include="Views\Empleado\CreateEmpleado.aspx" />
     <Content Include="Views\Empleado\DatosEmpleados.aspx" />
     <Content Include="Views\Empleado\DeleteEmpleado.aspx" />

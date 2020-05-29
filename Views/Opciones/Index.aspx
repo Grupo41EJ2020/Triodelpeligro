@@ -21,7 +21,9 @@
     <br />
     <br />
     <a href="/CursoTema/Index"> ir a curso tema</a>
-    
+    <br />  
+    <br />  
+    <a href="/Curso_Tema_Video/Curso_Tema_Video">Ir a Curso Tema Video</a>
     
 </body>
 </html>
